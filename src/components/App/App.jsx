@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Chest from '../Chest/Chest';
+import Coin from '../Coin/Coin';
+import { chests } from '../helpers';
+import { connect } from 'react-redux';
 import './app.css';
 
 /**
@@ -14,37 +17,47 @@ import './app.css';
  *
  */
 
-function App(props) {
+function App({ info }) {
   /**
    * A function which returns an array of random chests like:
    * ['gold', 'half', 'silver']
    * or
    * ['silve', 'gold', 'fifty']
    */
-  function getRandomChests() {
-    let options = ['gold', 'silver', 'half'];
-    let output = [];
-    // While we still have items, keep rolling
-    while (options.length) {
-      // Pick one random item, fill the array, then remove that item
-      // Pick a number between 0-2
-      let random = Math.floor(Math.random() * options.length);
-      output.push(options[random]);
-      // Remove the item from the options array
-      options.splice(random, 1);
-    }
-    return output;
-  }
-
-  let chests = getRandomChests();
 
   return (
     <div className="app">
-      {chests.map((name, index) => {
-        return <Chest name={name} key={index} />;
-      })}
+      <div className="info">
+        You are presented with 3 treasure chests. One of them contains 100 gold
+        coins, one contains 100 silver coins, the last one contains 50 silver
+        and 50 gold coins. You can draw one coin from the chest before you
+        decide. Can you pick the chest with 100 gold coins?
+      </div>
+      <div className="header">
+        <h1>
+          {info.foundChest ? (
+            <span>You found {info.desc}</span>
+          ) : (
+            'Pick a chest'
+          )}
+        </h1>
+      </div>
+      <div className="chest-area">
+        {chests.map((name, index) => {
+          return (
+            <div key={index}>
+              <Coin name={name} />
+              <Chest name={name} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return { info: state.info };
+}
+
+export default connect(mapStateToProps)(App);

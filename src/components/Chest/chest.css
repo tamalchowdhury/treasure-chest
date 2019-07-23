@@ -3,13 +3,17 @@
 }
 
 .chest {
-  background: grey;
-  border: 3px solid #333;
+  background: url('../../images/chest-close.png') no-repeat;
+  background-size: contain;
   border-radius: 5px;
-  width: 100px;
+  width: 120px;
   height: 100px;
   padding: 10px;
   margin: 10px 0;
+}
+
+.coin-area {
+  min-height: 50px;
 }
 
 .coin {
@@ -22,16 +26,24 @@
   margin: 0 auto;
 }
 
-.gold {
+.gold-coin {
   background: gold;
   border-color: goldenrod;
 }
 
-.silver {
+.silver-coin {
   background: silver;
   border-color: gray;
 }
 
+.gold {
+  background-image: url('../../images/gold-chest.png');
+}
+
+.silver {
+  background-image: url('../../images/silver-chest.png');
+}
+
 .half {
-  background: skyblue;
+  background-image: url('../../images/half-chest.png');
 }
