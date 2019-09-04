@@ -22,7 +22,9 @@ function Coin({ name }) {
       {/** The random coin */}
       {coin ? <div className={`coin ${name}-coin`}>{name}</div> : null}
       {coin ? null : (
-        <button onClick={() => drawCoin(true)}>Draw a coin</button>
+        <button className="btn" onClick={() => drawCoin(true)}>
+          Draw a coin
+        </button>
       )}
     </div>
   );

@@ -36,6 +36,7 @@ function Chest({ info, name, dispatch }) {
       <div className={`chest ${chest ? name : ''}`} />
 
       <button
+        className="btn"
         disabled={info.foundChest ? true : false}
         onClick={() => {
           dispatch({ type: 'PICK_CHEST', name, desc });

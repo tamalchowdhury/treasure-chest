@@ -28,19 +28,23 @@ function App({ info }) {
   return (
     <div className="app">
       <div className="info">
-        You are presented with 3 treasure chests. One of them contains 100 gold
-        coins, one contains 100 silver coins, the last one contains 50 silver
-        and 50 gold coins. You can draw one coin from the chest before you
-        decide. Can you pick the chest with 100 gold coins?
+        You are presented with 3 treasure chests.
+        <p>One of them contains 100 gold coins,</p>
+        <p>one contains 100 silver coins,</p>
+        <p>the last one contains 50 silver and 50 gold coins.</p>
+        <p>
+          You can draw one coin from the chest before you decide. Can you pick
+          the chest with 100 gold coins?
+        </p>
       </div>
       <div className="header">
-        <h1>
+        <h2>
           {info.foundChest ? (
             <span>You found {info.desc}</span>
           ) : (
             'Pick a chest'
           )}
-        </h1>
+        </h2>
       </div>
       <div className="chest-area">
         {chests.map((name, index) => {
@@ -52,6 +56,11 @@ function App({ info }) {
           );
         })}
       </div>
+      {info.foundChest ? (
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <button onClick={() => window.location.reload()}>Retry?</button>
+        </div>
+      ) : null}
     </div>
   );
 }
