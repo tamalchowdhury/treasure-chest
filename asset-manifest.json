@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/treasure-chest/static/css/main.a5f40420.chunk.css",
+    "main.js": "/treasure-chest/static/js/main.13e7e20b.chunk.js",
+    "main.js.map": "/treasure-chest/static/js/main.13e7e20b.chunk.js.map",
+    "runtime~main.js": "/treasure-chest/static/js/runtime~main.3a850dba.js",
+    "runtime~main.js.map": "/treasure-chest/static/js/runtime~main.3a850dba.js.map",
+    "static/js/2.1bc89d3e.chunk.js": "/treasure-chest/static/js/2.1bc89d3e.chunk.js",
+    "static/js/2.1bc89d3e.chunk.js.map": "/treasure-chest/static/js/2.1bc89d3e.chunk.js.map",
+    "index.html": "/treasure-chest/index.html",
+    "precache-manifest.151e5b0f9814fed9d43b46acc4912255.js": "/treasure-chest/precache-manifest.151e5b0f9814fed9d43b46acc4912255.js",
+    "service-worker.js": "/treasure-chest/service-worker.js",
+    "static/css/main.a5f40420.chunk.css.map": "/treasure-chest/static/css/main.a5f40420.chunk.css.map",
+    "static/media/chest.css": "/treasure-chest/static/media/silver-chest.e023663f.png"
+  }
+}
